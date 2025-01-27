@@ -4,15 +4,13 @@
     <meta charset="utf-8"/>
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!-- Jekyll will include CSS from _sass or from your assets folder automatically if you link them -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
   <body>
 
     <!-- Left-side static navbar -->
     <nav class="side-nav">
-      <!-- Logo (optional) -->
-      <!-- If you have your image in /assets/img/headshot_circle.png, uncomment below -->
+      <!-- (Optional) Logo -->
       <!-- <div class="logo-container">
         <img src="{{ '/assets/img/headshot_circle.png' | relative_url }}" alt="Logo" class="logo">
       </div> -->
@@ -31,13 +29,12 @@
       {{ content }}
     </main>
 
-    <!-- Optional JavaScript to highlight nav items on scroll -->
+    <!-- JavaScript to highlight nav items on scroll -->
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         const sections = document.querySelectorAll(".section");
         const navLi = document.querySelectorAll("nav.side-nav ul li a");
 
-        // Highlight nav item when section is in the viewport
         window.addEventListener("scroll", () => {
           let current = "";
           sections.forEach(section => {
