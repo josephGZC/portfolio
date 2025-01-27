@@ -10,8 +10,7 @@ title: Home
   <section id="about-me" class="section">
   <h2>About Me</h2>
   <p>
-    This is where you introduce yourself. You can talk about your background,
-    what you do, and any highlights you want to share.
+    I have 4 years of expertise in leveraging Python, SQL, and Fortran for the analysis of extensive simulation data, which involves terabytes of atomic coordinates, to derive insights for complex technical challenges. My proficiency in visualization and effective communication has also been honed and demonstrated through presentations at several conferences.
   </p>
   </section>
 
