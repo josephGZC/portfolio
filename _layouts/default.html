@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Jekyll will include CSS from _sass or from your assets folder automatically if you link them -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+
+    <!-- Left-side static navbar -->
+    <nav class="side-nav">
+      <!-- Logo (optional) -->
+      <!-- If you have your image in /assets/img/headshot_circle.png, uncomment below -->
+      <!-- <div class="logo-container">
+        <img src="{{ '/assets/img/headshot_circle.png' | relative_url }}" alt="Logo" class="logo">
+      </div> -->
+
+      <!-- Navigation Links -->
+      <ul>
+        <li><a href="#about-me" id="nav-about-me">About Me</a></li>
+        <li><a href="#skills" id="nav-skills">Skills</a></li>
+        <li><a href="#projects" id="nav-projects">Projects</a></li>
+        <li><a href="#experience" id="nav-experience">Experience</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content - Right Side -->
+    <main>
+      {{ content }}
+    </main>
+
+    <!-- Optional JavaScript to highlight nav items on scroll -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const sections = document.querySelectorAll(".section");
+        const navLi = document.querySelectorAll("nav.side-nav ul li a");
+
+        // Highlight nav item when section is in the viewport
+        window.addEventListener("scroll", () => {
+          let current = "";
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+              current = section.getAttribute("id"); 
+            }
+          });
+
+          navLi.forEach(a => {
+            a.classList.remove("active");
+            if (a.getAttribute("href").substring(1) === current) {
+              a.classList.add("active");
+            }
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>
