@@ -1,5 +1,12 @@
-title: Joseph Gregory Cabinta
-#logo: /assets/img/headshot_circle.png
-#description: text below image
-#show_downlloads: true
+title: "Joseph Gregory Cabinta"
+description: "text below image"
 theme: jekyll-theme-minimal
+
+# If you want GitHub Pages to read from 'main' or 'master', you can specify:
+# remote_theme: "pages-themes/minimal@v0.2.0" 
+# (But usually just `theme: jekyll-theme-minimal` is enough for GitHub Pages.)
+
+#logo: /assets/img/headshot_circle.png
+#show_downloads: true
+
+# You can add more Jekyll config options here as needed.
