@@ -1,0 +1,83 @@
+/* Basic reset and typography */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+/* Layout container */
+body {
+  display: flex;
+}
+
+/* Side navigation styling */
+.side-nav {
+  position: fixed;        /* Keep navigation fixed on the left side */
+  top: 0;
+  left: 0;
+  width: 200px;           /* Adjust width to your preference */
+  height: 100vh;          /* Full viewport height */
+  background-color: #f4f4f4;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Logo styling */
+.logo-container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.logo {
+  width: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Navigation list styling */
+.side-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-nav ul li {
+  margin: 1rem 0;
+}
+
+.side-nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.side-nav ul li a:hover {
+  color: #007acc;
+}
+
+/* Active link highlight */
+.side-nav ul li a.active {
+  color: #007acc;
+  text-decoration: underline;
+}
+
+/* Main content styling */
+main {
+  margin-left: 200px;     /* Same as side-nav width, so content doesn't slip under nav */
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;         /* Allow scrolling on the main section if content is tall */
+}
+
+/* Section styling for clarity */
+.section {
+  padding: 2rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
