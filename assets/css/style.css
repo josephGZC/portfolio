@@ -13,17 +13,18 @@ body {
 
 /* Side navigation styling */
 .side-nav {
-  position: fixed;        /* Keep navigation fixed on the left side */
+  position: fixed;        
   top: 0;
   left: 0;
-  width: 200px;           /* Adjust width to your preference */
-  height: 100vh;          /* Full viewport height */
+  width: 200px;          /* Adjust width as needed */
+  height: 100vh;         
   background-color: #f4f4f4;
   padding: 1rem;
   box-sizing: border-box;
+  overflow-y: auto;       /* Scroll if nav gets too long */
 }
 
-/* Logo styling */
+/* Logo styling (optional) */
 .logo-container {
   text-align: center;
   margin-bottom: 1rem;
@@ -65,11 +66,11 @@ body {
 
 /* Main content styling */
 main {
-  margin-left: 200px;     /* Same as side-nav width, so content doesn't slip under nav */
+  margin-left: 200px;     /* Same as side-nav width */
   padding: 1rem;
   width: 100%;
   box-sizing: border-box;
-  overflow: auto;         /* Allow scrolling on the main section if content is tall */
+  overflow: auto;         /* Allow scrolling if content is tall */
 }
 
 /* Section styling for clarity */
@@ -80,4 +81,80 @@ main {
 
 .section:last-of-type {
   border-bottom: none;
+}
+
+/* PROJECTS SECTION STYLING */
+
+/* Grid layout for projects (3 per row) */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Each project box */
+.project-item {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Project image styling */
+.project-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Project title */
+.project-item h4 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Buttons container */
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Buttons styling */
+.btn {
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Example: Different colors for each button type */
+.analysis-btn {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+}
+
+.code-btn {
+  background-color: #f4f4f4;
+  color: #333;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Responsive behavior: On smaller screens, reduce columns */
+@media (max-width: 800px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
